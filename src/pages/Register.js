@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Logo, FormRow, Alert } from "../components";
 import Wrapper from "../assets/wrappers/RegisterPage";
 import { useAppContext } from "../context/appContext";
+import { useNavigate } from "react-router-dom";
 const initialState = {
-  username: "",
+  name: "",
   password: "",
   email: "",
   isMember: true,
@@ -12,25 +13,40 @@ const initialState = {
 const Register = () => {
   const [values, setValues] = useState(initialState);
   //global state, and useNavigate
-  const { isLoading, showAlert, display_alert } = useAppContext();
+  const navigate = useNavigate();
+  const { user, isLoading, showAlert, display_alert, registerUser, loginUser } =
+    useAppContext();
   //console.log(isLoading, showAlert);
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
   };
   const handleChange = (e) => {
-    console.log(e.target.value);
+    //  console.log(e.target.value);
     setValues({ ...values, [e.target.name]: e.target.value });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { password, email, isMember, username } = values;
-    if (!password || !email || (!isMember && !username)) {
+    const { password, email, isMember, name } = values;
+    if (!password || !email || (!isMember && !name)) {
       display_alert();
-
       return;
     }
-    console.log(values);
+    const currentUser = { name, password, email };
+    if (isMember) {
+      loginUser(currentUser);
+    } else {
+      registerUser(currentUser);
+    }
+
+    //  console.log(values);
   };
+  useEffect(() => {
+    if (user) {
+      setTimeout(() => {
+        navigate("/");
+      }, 3000);
+    }
+  }, [user, navigate]);
   return (
     <Wrapper className="full-page">
       <form className="form" onSubmit={handleSubmit}>
@@ -42,7 +58,7 @@ const Register = () => {
             {...{
               type: "text",
               labelText: "name",
-              inputName: "username",
+              inputName: "name",
               handleChange: handleChange,
               value: values.username,
             }}
@@ -69,7 +85,7 @@ const Register = () => {
           }}
         />
 
-        <button type="submit" className="btn btn-block">
+        <button type="submit" className="btn btn-block" disabled={isLoading}>
           submit
         </button>
         <p>
