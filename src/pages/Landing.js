@@ -3,6 +3,7 @@ import React from "react";
 import { Logo } from "../components";
 import main from "../assets/images/main.svg";
 import Wrapper from "../assets/wrappers/LandingPage";
+import { Link } from "react-router-dom";
 const landing = () => {
   return (
     <Wrapper>
@@ -21,7 +22,9 @@ const landing = () => {
             single-origin coffee waistcoat selvage chillwave bitters mumblecore
             cray food truck distillery meditation.
           </p>
-          <button className="btn btn-hero">Login/Register</button>
+          <Link to="/register" className="btn btn-hero">
+            Login/Register
+          </Link>
         </div>
         <img src={main} alt="main svg" className="img main-img" />
       </div>
