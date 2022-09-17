@@ -1,6 +1,21 @@
-# Getting Started with Create React App
+#Jobify-front-end
+## This repo is the front-end of a full-stack MERN project
+## Jobify is an app that allow an employer/organization manage jobs (add job, show status, edit job, manage profile, etc...)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Dashboard
+![Screenshot (383)](https://user-images.githubusercontent.com/80765887/190844788-2698bdc2-026f-4687-a544-1200c2147682.png)
+
+## Login/register
+![Screenshot (384)](https://user-images.githubusercontent.com/80765887/190844803-83de8473-1b0d-4530-b6a1-41007fde8a2f.png)
+
+## All Jobs page
+![Screenshot (385)](https://user-images.githubusercontent.com/80765887/190844833-2abe76a2-68db-4315-bd82-3f76ac415525.png)
+
+## Add Jobs page
+![Screenshot (386)](https://user-images.githubusercontent.com/80765887/190844842-c884b653-abef-46c9-832f-ba6e62ae2b1a.png)
+
+## Edit Profile page
+![Screenshot (387)](https://user-images.githubusercontent.com/80765887/190844863-e1647311-215e-4002-8e49-9a440cbbf44e.png)
 
 ## Available Scripts
 
@@ -10,10 +25,6 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
@@ -68,3 +79,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
