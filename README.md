@@ -1,6 +1,6 @@
 #Jobify-front-end
-## This repo is the front-end of a full-stack MERN project
-## Jobify is an app that allow an employer/organization manage jobs (add job, show status, edit job, manage profile, etc...)
+#### This repo is the front-end of a full-stack MERN project
+#### Jobify is an app that allow an employer/organization manage jobs (add job, show status, edit job, manage profile, etc...)
 
 ## Dashboard
 ![Screenshot (383)](https://user-images.githubusercontent.com/80765887/190844788-2698bdc2-026f-4687-a544-1200c2147682.png)
